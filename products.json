@@ -4,20 +4,27 @@
     "title": "Dress T-Shirt",
     "description": "An nice looking shirt. This shirt fits like a glove.",
     "image": "/images/shirt.jpg",
-    "price": "$20"
+    "price": "20"
   },
   {
     "id": "price_1HzSdhLn95d5K3dgnAPtkIyE",
     "title": "Sticker",
     "description": "A great sticker to stick on any pole, trash can, or wall.",
     "image": "/images/sticker.jpg",
-    "price": "$5.00"
+    "price": "5"
   },
   {
     "id": "price_1HzSe9Ln95d5K3dg3mvXLjyc",
     "title": "Cat",
     "description": "Dangerous cat. Beware",
     "image": "/images/cat.jpg",
-    "price": "$250.00"
+    "price": "250"
+  },
+  {
+    "id": "price_1HzV6gLn95d5K3dgAy4XNnes",
+    "title": "Brandon",
+    "description": "A man. A Plan. A k9. Brandon",
+    "image": "/images/brandon.jpg",
+    "price": "22,500"
   }
 ]
