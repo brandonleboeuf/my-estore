@@ -1,0 +1,23 @@
+[
+  {
+    "id": "price_1HzSczLn95d5K3dgQrDjiXnY",
+    "title": "Dress T-Shirt",
+    "description": "An nice looking shirt. This shirt fits like a glove.",
+    "image": "/images/shirt.jpg",
+    "price": "$20"
+  },
+  {
+    "id": "price_1HzSdhLn95d5K3dgnAPtkIyE",
+    "title": "Sticker",
+    "description": "A great sticker to stick on any pole, trash can, or wall.",
+    "image": "/images/sticker.jpg",
+    "price": "$5.00"
+  },
+  {
+    "id": "price_1HzSe9Ln95d5K3dg3mvXLjyc",
+    "title": "Cat",
+    "description": "Dangerous cat. Beware",
+    "image": "/images/cat.jpg",
+    "price": "$250.00"
+  }
+]
