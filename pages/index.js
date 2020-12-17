@@ -13,9 +13,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Let's get a selling</h1>
+        <h1 className={styles.title}>Let's get a selling!</h1>
 
-        <p className={styles.description}>sell baby sell... online</p>
+        <p className={styles.description}>Sell baby sell... online...</p>
 
         <ul className={styles.grid}>
           {products.map((product) => {
