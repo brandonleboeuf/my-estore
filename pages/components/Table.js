@@ -7,7 +7,7 @@ const Table = ({ className, data, columns }) => {
     tableClassName = `${tableClassName} ${className}`;
   }
 
-  const rows = [...new Array(data.length)].map((item, index) => {
+  const rows = [...new Array(data.length)]?.map((item, index) => {
     return columns.map(({ columnId }) => data[index][columnId]);
   });
 
