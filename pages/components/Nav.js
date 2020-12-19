@@ -11,12 +11,12 @@ const Nav = () => {
   return (
     <nav>
       <Link href="/">
-        <a>
+        <a style={{ display: 'flex' }}>
           <h1 style={{ textDecoration: 'underline' }}>Brandon's Shop</h1>
           <img
             src="/images/stripe.png"
             alt=""
-            style={{ margin: '-20px 0 0 125px', width: '75px' }}
+            style={{ marginLeft: '10px', width: '75px' }}
           />
         </a>
       </Link>
