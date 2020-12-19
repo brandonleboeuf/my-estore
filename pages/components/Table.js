@@ -6,13 +6,10 @@ const Table = ({ className, data, columns }) => {
   if (className) {
     tableClassName = `${tableClassName} ${className}`;
   }
-  let rows = [];
 
-  if (data.length) {
-    rows = [...new Array(data.length)]?.map((item, index) => {
-      return columns.map(({ columnId }) => data[index][columnId]);
-    });
-  }
+  const rows = [...new Array(data.length)].map((item, index) => {
+    return columns.map(({ columnId }) => data[index][columnId]);
+  });
 
   return (
     <table className={tableClassName}>
