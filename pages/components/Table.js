@@ -6,7 +6,7 @@ const Table = ({ className, data, columns }) => {
   if (className) {
     tableClassName = `${tableClassName} ${className}`;
   }
-  let rows;
+  let rows = [];
 
   if (data.length) {
     rows = [...new Array(data.length)]?.map((item, index) => {
