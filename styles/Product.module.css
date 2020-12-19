@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  /* width: 600px; */
+  max-width: 90vw;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.productImageContainer {
+  width: 500px;
+  max-width: 90vw;
+  margin: auto 10px;
+}
+.productImage {
+  max-width: 500px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  margin: auto 20px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+}

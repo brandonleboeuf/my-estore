@@ -1,66 +1,14 @@
-import { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { FaShoppingCart } from 'react-icons/fa';
 import styles from '../styles/Home.module.css';
 
-import { initiateCheckout } from '../lib/payments';
+import { useCart } from '../hooks/use-cart';
 
 import products from '../products.json';
 
-const defaultCart = {
-  products: {},
-};
-
 export default function Home() {
-  const [cart, updateCart] = useState(defaultCart);
-
-  const cartItems = Object.keys(cart.products).map((key) => {
-    const product = products.find(({ id }) => `${id}` === `${key}`);
-    return {
-      ...cart.products[key],
-      pricePerItem: product.price,
-    };
-  });
-
-  const subtotal = cartItems.reduce(
-    (accumulator, { pricePerItem, quantity }) => {
-      return accumulator + pricePerItem * quantity;
-    },
-    0
-  );
-
-  const itemCount = cartItems.reduce((accumulator, { quantity }) => {
-    return accumulator + quantity;
-  }, 0);
-
-  console.log('itemCount', itemCount);
-
-  function addToCart({ id } = {}) {
-    updateCart((prev) => {
-      let cartState = { ...prev };
-
-      if (cartState.products[id]) {
-        cartState.products[id].quantity++;
-      } else {
-        cartState.products[id] = {
-          id,
-          quantity: 1,
-        };
-      }
-
-      return cartState;
-    });
-  }
-
-  function checkout() {
-    initiateCheckout({
-      lineItems: cartItems.map((item) => {
-        return {
-          price: item.id,
-          quantity: item.quantity,
-        };
-      }),
-    });
-  }
+  const { addToCart } = useCart();
 
   return (
     <div className={styles.container}>
@@ -70,22 +18,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Let's get a selling!</h1>
-
-        <p className={styles.description}>Sell baby sell... online...</p>
         <p className={styles.description}>
-          <strong>Items:</strong> {itemCount}
-          <br />
-          <strong>Total Cost:</strong> {subtotal}
-          <br />
-          <button
-            className={styles.button}
-            onClick={() => {
-              checkout();
-            }}
-          >
-            Check Out
-          </button>
+          The only place to buy shirts, stickers and pets...
         </p>
 
         <ul className={styles.grid}>
@@ -93,12 +27,18 @@ export default function Home() {
             const { image, title, price, description, id } = product;
             return (
               <li key={id} className={styles.card}>
-                <a href="#">
-                  <img src={image} alt={description} />
-                  <h3>{title}</h3>
-                  <p>{price}</p>
-                  <p>{description}</p>
-                </a>
+                <Link href={`/products/${id}`}>
+                  <a>
+                    <img
+                      src={image}
+                      alt={description}
+                      style={{ maxWidth: '100%' }}
+                    />
+                    <h3>{title}</h3>
+                    <p>${price}.00</p>
+                    <p>{description}</p>
+                  </a>
+                </Link>
                 <p>
                   <button
                     className={styles.button}
@@ -108,7 +48,7 @@ export default function Home() {
                       });
                     }}
                   >
-                    Add to Cart <span className={styles.cart}>🛒</span>
+                    Add to Cart <FaShoppingCart />
                   </button>
                 </p>
               </li>
