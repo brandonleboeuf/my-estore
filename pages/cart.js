@@ -31,7 +31,7 @@ const columns = [
 
 export default function Cart() {
   const { cartItems, checkout, updateItem } = useCart();
-  let data;
+  let data = [];
 
   if (cartItems) {
     data = cartItems.map((item) => {
