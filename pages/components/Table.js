@@ -1,6 +1,6 @@
 import styles from './Table.module.css';
 
-const Table = ({ className, data, columns }) => {
+const Table = ({ className, data = [], columns = [] }) => {
   let tableClassName = styles.table;
 
   if (className) {
