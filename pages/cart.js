@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { FaShoppingCart } from 'react-icons/fa';
 import { BsFillTrashFill } from 'react-icons/bs';
 import styles from '../styles/Cart.module.css';
@@ -21,7 +22,7 @@ const columns = [
   },
   {
     columnId: 'pricePerItem',
-    Header: 'Price Per',
+    Header: 'Unit Price',
   },
   {
     columnId: 'total',
@@ -109,9 +110,15 @@ export default function Cart() {
         <Table className={styles.table} data={data} columns={columns} />
 
         <p className={styles.checkout}>
-          <button className={stylesbtn.button} onClick={checkout}>
-            CheckOut
-          </button>
+          {cartItems.length > 0 ? (
+            <button className={stylesbtn.button} onClick={checkout}>
+              CheckOut
+            </button>
+          ) : (
+            <Link href="/">
+              <a className={stylesbtn.button}>&larr; Keep Shopping</a>
+            </Link>
+          )}
         </p>
       </main>
     </div>

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useCart } from '../../hooks/use-cart.js';
 
+import formatter from '../../helperFunctions/formatter';
+
 const logo = '/stripe.png';
 
 const Nav = () => {
@@ -20,10 +22,12 @@ const Nav = () => {
           />
         </a>
       </Link>
-      <Link className={styles.buttonCheckout} href="/cart">
-        <a>
+      <Link href="/cart">
+        <a className={styles.buttonCheckout}>
           <FaShoppingCart />
-          <span className={styles.cart__nav}>${subtotal}.00 </span>
+          <span className={styles.cart__nav}>
+            {formatter.format(subtotal)}{' '}
+          </span>
         </a>
       </Link>
     </nav>

@@ -7,6 +7,8 @@ import { useCart } from '../hooks/use-cart';
 
 import products from '../products.json';
 
+import formatter from '../helperFunctions/formatter';
+
 export default function Home() {
   const { addToCart } = useCart();
 
@@ -25,6 +27,7 @@ export default function Home() {
         <ul className={styles.grid}>
           {products.map((product) => {
             const { image, title, price, description, id } = product;
+            const priceForm = formatter.format(price);
             return (
               <li key={id} className={styles.card}>
                 <Link href={`/products/${id}`}>
@@ -35,7 +38,7 @@ export default function Home() {
                       style={{ maxWidth: '100%' }}
                     />
                     <h3>{title}</h3>
-                    <p>${price}.00</p>
+                    <p>{priceForm}</p>
                     <p>{description}</p>
                   </a>
                 </Link>

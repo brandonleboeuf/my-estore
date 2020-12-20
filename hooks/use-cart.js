@@ -33,7 +33,7 @@ export function useCartState() {
     const product = products.find(({ id }) => `${id}` === `${key}`);
     return {
       ...cart.products[key],
-      pricePerItem: product.price,
+      pricePerItem: +product.price,
     };
   });
 

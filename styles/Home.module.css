@@ -161,6 +161,7 @@
 
 .buttonCheckout {
   margin: 0;
+  height: 100%;
   color: #e05288;
   background-color: white;
   box-shadow: none;
