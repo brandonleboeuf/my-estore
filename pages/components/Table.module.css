@@ -1,4 +1,9 @@
-.tableClassName {
-  margin: 0 auto;
-  width: 1000px;
+.table {
+  margin: 50px auto;
+  max-width: 700px;
+  width: 90vw;
+}
+
+.table > thead {
+  margin-bottom: 200px;
 }

@@ -11,15 +11,29 @@
   max-width: 90vw;
   margin: auto 10px;
 }
-.productImage {
-  max-width: 500px;
-}
 
 .description {
   display: flex;
   flex-direction: column;
-  margin: auto 20px;
+  margin-top: 20px;
   width: 100%;
   justify-content: space-around;
   align-items: flex-start;
+}
+
+.productImage {
+  width: 500px;
+  max-width: 90vw;
+}
+
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    height: 600px;
+  }
+  .productImageContainer {
+    margin: 0;
+  }
 }

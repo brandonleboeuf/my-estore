@@ -1,16 +1,15 @@
 .container {
 }
 
+.title {
+  /* margin-bottom: 50px; */
+}
 .main {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
   width: 1000px;
-}
-
-.title {
-  /* margin-bottom: 50px; */
 }
 
 .table {
@@ -30,8 +29,13 @@
   margin: 0;
 }
 
-.checkout {
+@media (max-width: 600px) {
+  .main {
+    width: 100vw;
+  }
 }
 
-.button {
+.updateInput {
+  width: 50px;
+  margin-right: 5px;
 }

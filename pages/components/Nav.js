@@ -13,13 +13,9 @@ const Nav = () => {
   return (
     <nav>
       <Link href="/">
-        <a style={{ display: 'flex' }}>
-          <h1 style={{ textDecoration: 'underline' }}>Brandon's Shop</h1>
-          <img
-            src="/images/stripe.png"
-            alt=""
-            style={{ marginLeft: '10px', width: '75px' }}
-          />
+        <a className={styles.logo}>
+          <h1>Brandon's Shop</h1>
+          <img src="/images/stripe.png" alt="stripe logo" />
         </a>
       </Link>
       <Link href="/cart">

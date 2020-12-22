@@ -69,8 +69,8 @@ export default function Cart() {
             min={0}
             defaultValue={item.quantity}
             style={{
-              width: '50px',
-              marginRight: '5px',
+              width: '100px',
+              margin: '5px',
             }}
           />
           <button>Update</button>
