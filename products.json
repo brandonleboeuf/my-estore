@@ -16,15 +16,15 @@
   {
     "id": "price_1HzSe9Ln95d5K3dg3mvXLjyc",
     "title": "Cat",
-    "description": "Dangerous cat. Beware",
+    "description": "Dangerous cat. Beware!",
     "image": "/images/cat.jpg",
     "price": "250"
   },
   {
     "id": "price_1HzV6gLn95d5K3dgAy4XNnes",
     "title": "Brandon",
-    "description": "A man. A Plan. A k9. Brandon",
+    "description": "A Man, a Plan, a Canal... Panama!",
     "image": "/images/brandon.jpg",
-    "price": "22500"
+    "price": "5000"
   }
 ]
